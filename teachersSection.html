@@ -1,190 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      :root {
-        --default-font: muli, -apple-system, BlinkMacSystemFont, segoe ui,
-          Roboto, helvetica neue, Arial, sans-serif, apple color emoji,
-          segoe ui emoji, segoe ui symbol, noto color emoji;
-      }
-      .teachersSection {
-        width: 100%;
-        margin: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 60px;
-      }
-      .sectionTitleTeachers {
-        font-family: var(--default-font);
-        font-size: 40px;
-        margin-bottom: 120px;
-        text-align: center;
-      }
-      .AllTeachersInfo {
-        width: 1044px;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: start;
-        align-items: start;
-        column-gap: 40px;
-        row-gap: 50px;
-      }
-      .AllTeachersInfo .teacherInfoBox {
-        width: 319px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-        border: 1px solid #c9bcbc;
-        margin-bottom: 80px;
-        background-color: #fff;
-      }
-      .AllTeachersInfo .teacherImg {
-        width: 142px;
-        height: 190px;
-        margin: -80px auto 0 auto;
-      }
-      .AllTeachersInfo .teacherName {
-        font-size: 1.2rem;
-        margin: 30px auto 15px;
-        font-family: inherit;
-        font-weight: 500;
-        line-height: 1.2;
-        color: #000;
-        font-family: var(--default-font);
-      }
-      .AllTeachersInfo .teacherInfo {
-        width: 70%;
-        margin: 0 auto 15px;
-        text-align: center;
-        line-height: 1.7;
-        color: gray;
-        font-weight: 300;
-        font-size: 1.1rem;
-        font-family: var(--default-font);
-      }
-      .firstImg {
-        position: absolute;
-        top: 0;
-        right: -220px;
-        z-index: -1;
-      }
-      .secundImg {
-        position: absolute;
-        bottom: 0;
-        left: -100px;
-        z-index: -1;
-      }
-      @media (max-width: 1050px) {
-        .AllTeachersInfo {
-          width: 100%;
-          justify-content: center;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="teachersSection">
-      <img
-        src="https://treinamentosconvet.com/theme/theme07/images/blob_1.svg"
-        alt="Image"
-        class="firstImg"
-      />
-      <h2 class="sectionTitleTeachers">Nossos Professores</h2>
-      <div class="AllTeachersInfo"></div>
-      <img
-        src="https://treinamentosconvet.com/theme/theme07/images/blob_2.svg"
-        alt="Image"
-        class="secundImg"
-      />
-    </div>
-    <script>
-      const teachersInfoList = [
-        {
-          image: '/assets/img/colaboradores/colaborador-8.jpg',
-          name: 'Saulo Pasko',
-          info: 'É Auditor Fiscal Federal Agropecuário desde 2018, encarregado pela fiscalização de um estabelecimento de abate de suínos e alguns periódicos. Anteriormente, trabalhou por quatro anos como Fiscal Estadual Agropecuário no Rio Grande do Sul, atuando principalmente na inspeção de suínos e fazendo auditorias de BPF em plantas de diversas áreas. Formado pela Universidade Federal do Rio Grande do Sul e especialista em Vigilância Sanitária e Qualidade dos Alimentos.',
-        },
-        {
-          image: '/assets/img/colaboradores/colaborador-9.jpg',
-          name: 'Fábio Kanitz',
-          info: 'É Fiscal Estadual Agropecuário na Secretaria Estadual da Agricultura no RS desde 2014, na qual trabalha realizando Supervisão, Auditoria e Avaliação de Projetos e Rotulagem de estabelecimentos de Produtos de Origem Animal. Possui graduação em Medicina Veterinária pela Universidade Federal de Santa Maria, graduação em Ciências Contábeis pela UNISINOS, Mestrado em Medicina Veterinária Preventiva – Epidemiologia e diagnóstico de Doenças Infectocontagiosa pela UFSM.',
-        },
-        {
-          image: '/assets/img/colaboradores/colaborador-10.jpg',
-          name: 'Paula Campello',
-          info: 'É Auditora Fiscal Federal Agropecuária desde 2018, com experiência em inspeção de aves, bovinos e suínos. Anteriormente atuou como médica veterinária oficial pelo MAPA em abatedouro de aves. Possui graduação em medicina veterinária, com mestrado e doutorado na área de medicina veterinária preventiva pela FCAV - UNESP, Jaboticabal/SP.',
-        },
-        {
-          image: '/assets/img/colaboradores/colaborador-11.jpg',
-          name: 'Raquel Cannavô',
-          info: 'É Fiscal Estadual Agropecuária no RS desde 2015, encarregada pela supervisão dos estabelecimentos da Regional Porto Alegre. Anteriormente trabalhou como fiscal responsável em abatedouros de bovinos, ovinos e suínos. Formada em medicina veterinária pela Universidade Federal de Pelotas e especialista na área de Higiene e Inspeção de Produtos de Origem Animal, tem experiência profissional como docente para o ensino de Pós-Graduação de cursos na área.',
-        },
-        {
-          image: '/assets/img/colaboradores/colaborador-12.jpeg',
-          name: 'Ana Carolina Plefh',
-          info: 'É Médica Veterinária e Empreendedora da Inspoa Consultoria de serviços de inspeção de alimentos e estabelecimentos. Também atua como Consultora e Responsável técnica em empresa de alimentação animal. Doutoranda em Produção Animal (Universidade Estadual de Maringá-UEM). Especialista em Higiene, Inspeção e Tecnologia de Produtos de Origem Animal e Mestre em Produção Animal com ênfase em Tecnologia de Produtos Agropecuários (UEM).',
-        },
-        {
-          image: '/assets/img/colaboradores/colaborador-13.jpg',
-          name: 'Jéssica Becker',
-          info: 'É Fiscal Agropecuária no Instituto Mineiro de Agropecuária – IMA. Possui graduação em medicina veterinária, especialização em Higiene, Inspeção e Tecnologia de Produtos de Origem Animal, pós graduada em vigilância sanitária e qualidade dos alimentos e Mestranda em Sanidade e Bem-estar animal. Anteriormente, trabalhou como responsável Técnica e Coordenadora do controle de qualidade em uma indústria de pescado e na coordenadoria de um Serviço de Inspeção Municipal em São Paulo.',
-        },
-        {
-          image: '/assets/img/colaboradores/colaborador-14.jpg',
-          name: 'Mariana Boeng',
-          info: 'É Supervisora de Controle de Qualidade e Responsável técnica em abatedouro de suínos registrado no Serviço de Inspeção Federal, no qual realizou a implantação dos Programas de Autocontrole, Registros de produtos, Projetos de reforma e ampliação e é encarregada pelo acompanhamento de Auditorias e Missões Internacionais. Possui graduação em Medicina Veterinária, curso de capacitação de Higiene e Inspeção de Produtos de Origem Animal e mestranda em Produção e Sanidade Animal pelo Instituto Federal Catarinense.',
-        },
-        {
-          image: '/assets/img/colaboradores/colaborador-15.jpg',
-          name: 'Ana Paula Burin',
-          info: 'Graduada em Medicina Veterinária pela Universidade Federal de Santa Maria (UFSM), Mestra e Doutora em Ciência e Tecnologia dos Alimentos (UFSM), com período sanduíche na Universidade de Nevada (Reno, EUA). Também possui licenciatura pelo Programa Especial de Graduação de Formação de Professores para a Educação Profissional (PEG-UFSM). Atualmente é Fiscal Estadual Agropecuário da Secretaria da Agricultura do Rio Grande do Sul, atuando na área de defesa sanitária animal e inspeção de produtos de origem animal.',
-        },
-      ];
-      const urlInit = 'https://treinamentosconvet.com';
-      const teachersInfoBox = document.querySelector('.AllTeachersInfo');
+<meta charset="UTF-8" />
+<style>
+  :root {
+    --default-font: muli, -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+      helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji,
+      segoe ui symbol, noto color emoji;
+  }
+  .teachersSection {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+  }
+  .sectionTitleTeachers {
+    font-family: var(--default-font);
+    font-size: 40px;
+    margin-bottom: 120px;
+    text-align: center;
+  }
+  .AllTeachersInfo {
+    width: 1044px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    column-gap: 40px;
+    row-gap: 50px;
+  }
+  .AllTeachersInfo .teacherInfoBox {
+    width: 319px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border: 1px solid #c9bcbc;
+    margin-bottom: 80px;
+    background-color: #fff;
+  }
+  .AllTeachersInfo .teacherImg {
+    width: 142px;
+    height: 190px;
+    margin: -80px auto 0 auto;
+  }
+  .AllTeachersInfo .teacherName {
+    font-size: 1.2rem;
+    margin: 30px auto 15px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000;
+    font-family: var(--default-font);
+  }
+  .AllTeachersInfo .teacherInfo {
+    width: 70%;
+    margin: 0 auto 15px;
+    text-align: center;
+    line-height: 1.7;
+    color: gray;
+    font-weight: 300;
+    font-size: 1.1rem;
+    font-family: var(--default-font);
+  }
+  .firstImg {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    z-index: -1;
+  }
+  .secundImg {
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    z-index: -1;
+  }
+  @media (max-width: 1050px) {
+    .AllTeachersInfo {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+<div class="teachersSection">
+  <img
+    src="https://treinamentosconvet.com/theme/theme07/images/blob_1.svg"
+    alt="Image"
+    class="firstImg"
+  />
+  <h2 class="sectionTitleTeachers">Nossos Professores</h2>
+  <div class="AllTeachersInfo"></div>
+  <img
+    src="https://treinamentosconvet.com/theme/theme07/images/blob_2.svg"
+    alt="Image"
+    class="secundImg"
+  />
+</div>
+<script>
+  const teachersInfoList = [
+    {
+      image: '/assets/img/colaboradores/colaborador-8.jpg',
+      name: 'Saulo Pasko',
+      info: 'É Auditor Fiscal Federal Agropecuário desde 2018, encarregado pela fiscalização de um estabelecimento de abate de suínos e alguns periódicos. Anteriormente, trabalhou por quatro anos como Fiscal Estadual Agropecuário no Rio Grande do Sul, atuando principalmente na inspeção de suínos e fazendo auditorias de BPF em plantas de diversas áreas. Formado pela Universidade Federal do Rio Grande do Sul e especialista em Vigilância Sanitária e Qualidade dos Alimentos.',
+    },
+    {
+      image: '/assets/img/colaboradores/colaborador-9.jpg',
+      name: 'Fábio Kanitz',
+      info: 'É Fiscal Estadual Agropecuário na Secretaria Estadual da Agricultura no RS desde 2014, na qual trabalha realizando Supervisão, Auditoria e Avaliação de Projetos e Rotulagem de estabelecimentos de Produtos de Origem Animal. Possui graduação em Medicina Veterinária pela Universidade Federal de Santa Maria, graduação em Ciências Contábeis pela UNISINOS, Mestrado em Medicina Veterinária Preventiva – Epidemiologia e diagnóstico de Doenças Infectocontagiosa pela UFSM.',
+    },
+    {
+      image: '/assets/img/colaboradores/colaborador-10.jpg',
+      name: 'Paula Campello',
+      info: 'É Auditora Fiscal Federal Agropecuária desde 2018, com experiência em inspeção de aves, bovinos e suínos. Anteriormente atuou como médica veterinária oficial pelo MAPA em abatedouro de aves. Possui graduação em medicina veterinária, com mestrado e doutorado na área de medicina veterinária preventiva pela FCAV - UNESP, Jaboticabal/SP.',
+    },
+    {
+      image: '/assets/img/colaboradores/colaborador-11.jpg',
+      name: 'Raquel Cannavô',
+      info: 'É Fiscal Estadual Agropecuária no RS desde 2015, encarregada pela supervisão dos estabelecimentos da Regional Porto Alegre. Anteriormente trabalhou como fiscal responsável em abatedouros de bovinos, ovinos e suínos. Formada em medicina veterinária pela Universidade Federal de Pelotas e especialista na área de Higiene e Inspeção de Produtos de Origem Animal, tem experiência profissional como docente para o ensino de Pós-Graduação de cursos na área.',
+    },
+    {
+      image: '/assets/img/colaboradores/colaborador-12.jpeg',
+      name: 'Ana Carolina Plefh',
+      info: 'É Médica Veterinária e Empreendedora da Inspoa Consultoria de serviços de inspeção de alimentos e estabelecimentos. Também atua como Consultora e Responsável técnica em empresa de alimentação animal. Doutoranda em Produção Animal (Universidade Estadual de Maringá-UEM). Especialista em Higiene, Inspeção e Tecnologia de Produtos de Origem Animal e Mestre em Produção Animal com ênfase em Tecnologia de Produtos Agropecuários (UEM).',
+    },
+    {
+      image: '/assets/img/colaboradores/colaborador-13.jpg',
+      name: 'Jéssica Becker',
+      info: 'É Fiscal Agropecuária no Instituto Mineiro de Agropecuária – IMA. Possui graduação em medicina veterinária, especialização em Higiene, Inspeção e Tecnologia de Produtos de Origem Animal, pós graduada em vigilância sanitária e qualidade dos alimentos e Mestranda em Sanidade e Bem-estar animal. Anteriormente, trabalhou como responsável Técnica e Coordenadora do controle de qualidade em uma indústria de pescado e na coordenadoria de um Serviço de Inspeção Municipal em São Paulo.',
+    },
+    {
+      image: '/assets/img/colaboradores/colaborador-14.jpg',
+      name: 'Mariana Boeng',
+      info: 'É Supervisora de Controle de Qualidade e Responsável técnica em abatedouro de suínos registrado no Serviço de Inspeção Federal, no qual realizou a implantação dos Programas de Autocontrole, Registros de produtos, Projetos de reforma e ampliação e é encarregada pelo acompanhamento de Auditorias e Missões Internacionais. Possui graduação em Medicina Veterinária, curso de capacitação de Higiene e Inspeção de Produtos de Origem Animal e mestranda em Produção e Sanidade Animal pelo Instituto Federal Catarinense.',
+    },
+    {
+      image: '/assets/img/colaboradores/colaborador-15.jpg',
+      name: 'Ana Paula Burin',
+      info: 'Graduada em Medicina Veterinária pela Universidade Federal de Santa Maria (UFSM), Mestra e Doutora em Ciência e Tecnologia dos Alimentos (UFSM), com período sanduíche na Universidade de Nevada (Reno, EUA). Também possui licenciatura pelo Programa Especial de Graduação de Formação de Professores para a Educação Profissional (PEG-UFSM). Atualmente é Fiscal Estadual Agropecuário da Secretaria da Agricultura do Rio Grande do Sul, atuando na área de defesa sanitária animal e inspeção de produtos de origem animal.',
+    },
+  ];
+  const urlInit = 'https://treinamentosconvet.com';
+  const teachersInfoBox = document.querySelector('.AllTeachersInfo');
 
-      for (let i = 0; i < teachersInfoList.length; i++) {
-        try {
-          //Box with all the information of each teacher
-          let teacherInfoBox = document.createElement('div');
-          teacherInfoBox.classList.add('teacherInfoBox');
-          teachersInfoBox.appendChild(teacherInfoBox);
+  for (let i = 0; i < teachersInfoList.length; i++) {
+    try {
+      //Box with all the information of each teacher
+      let teacherInfoBox = document.createElement('div');
+      teacherInfoBox.classList.add('teacherInfoBox');
+      teachersInfoBox.appendChild(teacherInfoBox);
 
-          //Teacher image
-          let teacherImg = document.createElement('img');
-          teacherImg.setAttribute(
-            'src',
-            `${urlInit}${teachersInfoList[i].image}`
-          );
-          teacherImg.setAttribute('alt', 'Teacher image');
-          teacherImg.classList.add('teacherImg');
-          teacherInfoBox.appendChild(teacherImg);
-          //Teacher name
-          let teacherName = document.createElement('p');
-          teacherName.innerHTML = `${teachersInfoList[i].name}`;
-          teacherName.classList.add('teacherName');
-          teacherInfoBox.appendChild(teacherName);
-          //Teacher Info
-          let teacherInfo = document.createElement('p');
-          teacherInfo.innerHTML = `${teachersInfoList[i].info}`;
-          teacherInfo.classList.add('teacherInfo');
-          teacherInfoBox.appendChild(teacherInfo);
-        } catch (e) {
-          console.warn(e);
-        }
-      }
-    </script>
-  </body>
-</html>
+      //Teacher image
+      let teacherImg = document.createElement('img');
+      teacherImg.setAttribute('src', `${urlInit}${teachersInfoList[i].image}`);
+      teacherImg.setAttribute('alt', 'Teacher image');
+      teacherImg.classList.add('teacherImg');
+      teacherInfoBox.appendChild(teacherImg);
+      //Teacher name
+      let teacherName = document.createElement('p');
+      teacherName.innerHTML = `${teachersInfoList[i].name}`;
+      teacherName.classList.add('teacherName');
+      teacherInfoBox.appendChild(teacherName);
+      //Teacher Info
+      let teacherInfo = document.createElement('p');
+      teacherInfo.innerHTML = `${teachersInfoList[i].info}`;
+      teacherInfo.classList.add('teacherInfo');
+      teacherInfoBox.appendChild(teacherInfo);
+    } catch (e) {
+      console.warn(e);
+    }
+  }
+</script>
